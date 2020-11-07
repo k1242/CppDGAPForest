@@ -62,6 +62,7 @@ private:
             fixheight(p);
             return p;
         }
+        fixheight(p);
         return p;
     }
 
@@ -92,20 +93,28 @@ private:
     }
 
     node *singleRightRotate(node *t) {
+        if (t->left == nullptr)
+            return t;
         node *u = t->left;
         t->left = u->right;
         u->right = t;
         fixheight(t);
         fixheight(u);
+        if (t == root)
+            root = u;
         return u;
     }
 
     node *singleLeftRotate(node *t) {
+        if (t->right == nullptr)
+            return t;
         node *u = t->right;
         t->right = u->left;
         u->left = t;
         fixheight(t);
         fixheight(u);
+        if (t == root)
+            root = u;
         return u;
     }
 
@@ -165,7 +174,7 @@ public:
         root = remove(root, v);
     }
 
-    int *find(T v) {
+    T *find(T v) {
         return &(find(root, v)->val);
     }
 };
@@ -186,8 +195,16 @@ int main() {
 
     std::cout << "##########################################\n";
 
-    /*AVL<std::string> oak;
+    AVL<std::string> oak;
     std::cout << (oak.find("Kiselev") != nullptr) << '\n';
-    oak.insert("Alexandrov");*/
+    oak.insert("Alexandrov");
+    oak.insert("Karasev");
+    oak.insert("Kiselev");
+    std::cout << (oak.find("Kiselev") != nullptr) << '\n';
+    std::cout << (oak.find("Alexandrov") != nullptr) << '\n';
+    oak.insert("Arutiunov");
+    oak.remove("Alexandrov");
+    std::cout << (oak.find("Arutiunov") != nullptr) << '\n';
+    std::cout << (oak.find("Alexandrov") != nullptr) << '\n';
     return 0;
 }

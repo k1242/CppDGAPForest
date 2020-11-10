@@ -1,30 +1,68 @@
-// erasing from set
 #include <iostream>
-#include <set>
+#include <chrono>
+// #include <set>
+#include "AVL.cpp"
+#include "RB_Tree.cpp"
+
+
 
 int main ()
 {
-  using namespace std;
-  set<int> test_set;
-  set<int>::iterator it;
+    using namespace std;
+    RBTree<int> test_struct = {};
 
-  // insert some values:
-  for (int i=1; i<10; i++) test_set.insert(i*10);  // 10 20 30 40 50 60 70 80 90
+    double tmp_1 = 0;
+    int rep_1 = 1 * 1000 * 1000;
+    int factor =  1;
+    int N = 0; 
 
-  it = test_set.begin();
-  ++it;                                         // "it" points now to 20
+    auto start = std::chrono::high_resolution_clock::now();
+    auto finish = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> elapsed = finish - start;
 
-  test_set.erase (it);
 
-  test_set.erase (40);
+    for (int k = 1; k <= 10 * 1000; k *= 10)
+    {
+        factor =  k;
+        N = 0; 
+        test_struct = {};
+    
+        for (int j = 0; j < 100; ++j)
+        {
 
-  it = test_set.find (70);
-  test_set.erase (it, test_set.end());
+            for (int i = (factor + rep_1) * j;
+                 i < factor * (j+1) + rep_1 * j; 
+                 ++i)
+            {
+                test_struct.insert(i);
+            }
 
-  cout << "test set contains:\n\t";
-  for (it=test_set.begin(); it!=test_set.end(); ++it)
-      cout << *it << " ";
-  cout << '\n';
+            start = std::chrono::high_resolution_clock::now();
+            for (int i = factor * (j+1) + rep_1 * j; 
+                i < (factor + rep_1) * (j + 1); ++i)
+            {
+                // Код для тестирования:
 
-  return 0;
+                // -----------------------
+                // test_struct.insert(i);
+                // test_struct.find(100);
+                test_struct.remove(i*2);
+                // -----------------------
+            }
+            finish = std::chrono::high_resolution_clock::now();
+
+            elapsed = finish-start;
+            tmp_1 = elapsed.count();
+            N += factor;
+
+            std::cout << N <<"," << tmp_1 << "\n";  
+
+        }
+    }
+
 }
+
+
+
+
+

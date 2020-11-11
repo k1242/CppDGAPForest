@@ -11,9 +11,9 @@
 При различных размерах дерева (от 0 до <img src="https://latex.codecogs.com/gif.latex?10^8" /> элементов) измеряется время вставки элемента (insert), поиска (find) и удаения (remove). Каждое измерение производится <img src="https://latex.codecogs.com/gif.latex?10^6" /> раз. По МНК находим линейное и нелинейное приближение (для понимания применимости линейной аппроксимации), из корней диагональных элементов ковариационной матрицы нахожим ошибку полученных величин.
 
 Можете самостоятельно воспользоваться
-[кодом](https://neerc.ifmo.ru/wiki/index.php?title=%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE-%D1%87%D0%B5%D1%80%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE)
+[кодом](https://github.com/k1242/CppDGAPForest/blob/main/Testing%20system/TestSet.cpp)
  для тестирования и
-[блокнотом](https://neerc.ifmo.ru/wiki/index.php?title=%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE-%D1%87%D0%B5%D1%80%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE) 
+[блокнотом](https://github.com/k1242/CppDGAPForest/blob/main/Testing%20system/read_data.ipynb) 
 для обработки результатов. 
 
 ## Результаты

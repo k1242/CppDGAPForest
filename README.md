@@ -17,3 +17,25 @@
 для обработки результатов. 
 
 ## Результаты
+
+### АВЛ-дерево
+
+![find](https://github.com/k1242/CppDGAPForest/blob/main/Testing%20system/figures/AVL_find.png)
+
+![insert](https://github.com/k1242/CppDGAPForest/blob/main/Testing%20system/figures/AVL_insert.png)
+
+![remove](https://github.com/k1242/CppDGAPForest/blob/main/Testing%20system/figures/AVL_remove.png)
+
+### Красно-чёрное дерево
+
+![find](https://github.com/k1242/CppDGAPForest/blob/main/Testing%20system/figures/RB_find.png)
+
+![insert](https://github.com/k1242/CppDGAPForest/blob/main/Testing%20system/figures/RB_insert.png)
+
+![remove](https://github.com/k1242/CppDGAPForest/blob/main/Testing%20system/figures/RB_remove.png)
+
+### Общий обзор
+
+Можно заметить, что время работы достаточно схоже для одни и тех же действий. Светлым показано нелинейная аппрокимация точек, которая, как видно, ни сильно отличается в пределах погрешности.
+
+![overview](https://github.com/k1242/CppDGAPForest/blob/main/Testing%20system/figures/overview.png)

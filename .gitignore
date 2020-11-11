@@ -4,3 +4,5 @@
 *.sublime-project
 
 *.in
+
+Testing system/.ipynb_checkpoints/read_data-checkpoint.ipynb

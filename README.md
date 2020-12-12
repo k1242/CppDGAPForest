@@ -22,6 +22,10 @@
 
 ![find](https://github.com/k1242/CppDGAPForest/blob/main/Testing%20system/figures/AVL_find.png)
 
+Для рандомизированной проверки, получим (масштаб был изменен в 100 раз)
+
+![find](https://github.com/k1242/CppDGAPForest/blob/main/Testing%20system/figures/r_AVL_find.png)
+
 ![insert](https://github.com/k1242/CppDGAPForest/blob/main/Testing%20system/figures/AVL_insert.png)
 
 ![remove](https://github.com/k1242/CppDGAPForest/blob/main/Testing%20system/figures/AVL_remove.png)
@@ -29,6 +33,10 @@
 ### Красно-чёрное дерево
 
 ![find](https://github.com/k1242/CppDGAPForest/blob/main/Testing%20system/figures/RB_find.png)
+
+Для рандомизированной проверки, получим (масштаб был изменен в 10 раз)
+
+![find](https://github.com/k1242/CppDGAPForest/blob/main/Testing%20system/figures/rand%20RB%20find.png)
 
 ![insert](https://github.com/k1242/CppDGAPForest/blob/main/Testing%20system/figures/RB_insert.png)
 
